@@ -11,7 +11,10 @@
 		"lint:fix": "yarn format && yarn lint --fix",
 		"prepare": "husky install",
 		"start": "next start",
-		"test": "jest"
+		"test": "jest",
+		"test:e2e": "npx playwright test",
+		"test:e2e:report": "npx playwright show-report",
+		"test:e2e:codegen": "npx playwright codegen"
 	},
 	"dependencies": {
 		"@types/node": "20.5.0",
@@ -27,7 +30,9 @@
 		"typescript": "5.1.6"
 	},
 	"devDependencies": {
+		"@axe-core/playwright": "^4.7.3",
 		"@axe-core/react": "^4.7.3",
+		"@playwright/test": "^1.37.1",
 		"@testing-library/react": "^14.0.0",
 		"@types/jest": "^29.5.3",
 		"@typescript-eslint/eslint-plugin": "^6.4.0",
