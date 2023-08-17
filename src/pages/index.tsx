@@ -1,7 +1,10 @@
 import Head from 'next/head';
+import useTranslation from 'next-translate/useTranslation';
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<Head>
@@ -10,6 +13,7 @@ const Home: NextPage = () => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+			<p>{t('common:title')}</p>
 		</>
 	);
 };
