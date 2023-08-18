@@ -6,6 +6,8 @@ const { Default, Disabled } = composeStories(stories);
 
 const setup = () => {
 	const button = screen.getByRole('button');
+	expect(button).toBeAtoms();
+	expect(button).toBeInTheDocument();
 	return { button };
 };
 
@@ -13,13 +15,11 @@ describe('CustomButton', () => {
 	test('Default', () => {
 		render(<Default />);
 		const { button } = setup();
-		expect(button).toBeInTheDocument();
 		expect(button).toBeEnabled();
 	});
 	test('Disabled', () => {
 		render(<Disabled />);
 		const { button } = setup();
-		expect(button).toBeInTheDocument();
 		expect(button).toBeDisabled();
 	});
 });

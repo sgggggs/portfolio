@@ -31,6 +31,7 @@ module.exports = {
 	],
 	rules: {
 		'@typescript-eslint/explicit-module-boundary-types': 'error',
+		'@typescript-eslint/no-namespace': ['error', { allowDeclarations: true }],
 		'no-unused-vars': 'off',
 		'react/display-name': 'off',
 		'unused-imports/no-unused-imports': 'warn',
