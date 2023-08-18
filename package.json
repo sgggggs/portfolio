@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"build": "next build",
+		"build:api": "aspida",
 		"build:storybook": "storybook build",
 		"dev": "next dev",
 		"format": "prettier --write .",
@@ -19,7 +20,9 @@
 		"test:e2e:report": "npx playwright show-report"
 	},
 	"dependencies": {
+		"@aspida/fetch": "^1.14.0",
 		"@vanilla-extract/css": "^1.12.0",
+		"aspida": "^1.14.0",
 		"microcms-js-sdk": "^2.5.0",
 		"next": "13.4.16",
 		"next-translate": "^2.5.3",

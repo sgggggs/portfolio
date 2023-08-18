@@ -1,9 +1,20 @@
 import Head from 'next/head';
 import useTranslation from 'next-translate/useTranslation';
-import type { NextPage } from 'next';
+import { API_KEY_EXPERIENCE } from '@/api/constants';
+import { client } from '@/api/utils';
+import type { MicroCMSListExperience } from '@/api/types';
+import type { GetStaticProps, NextPage } from 'next';
 
-const Home: NextPage = () => {
+type Props = {
+	data: { [API_KEY_EXPERIENCE]: MicroCMSListExperience };
+};
+
+const Home: NextPage<Props> = ({ data }) => {
 	const { t } = useTranslation();
+	console.log(
+		data[API_KEY_EXPERIENCE].contents,
+		'TODO: Using this data to implement the component.',
+	);
 
 	return (
 		<>
@@ -16,6 +27,18 @@ const Home: NextPage = () => {
 			<p>{t('common:title')}</p>
 		</>
 	);
+};
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+	const experiences = await client.v1.experiences.$get();
+
+	return {
+		props: {
+			data: {
+				[API_KEY_EXPERIENCE]: experiences,
+			},
+		},
+	};
 };
 
 export default Home;
