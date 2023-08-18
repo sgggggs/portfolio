@@ -12,7 +12,14 @@ module.exports = {
 		sourceType: 'module',
 		project: './tsconfig.json',
 	},
-	plugins: ['@typescript-eslint', 'jsx-a11y', 'import', 'unused-imports'],
+	plugins: [
+		'@typescript-eslint',
+		'jsx-a11y',
+		'import',
+		'unused-imports',
+		'jest-dom',
+		'testing-library',
+	],
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
@@ -20,10 +27,12 @@ module.exports = {
 		'plugin:jsx-a11y/recommended',
 		'next/core-web-vitals',
 		'prettier',
+		'plugin:storybook/recommended',
 	],
 	rules: {
 		'@typescript-eslint/explicit-module-boundary-types': 'error',
 		'no-unused-vars': 'off',
+		'react/display-name': 'off',
 		'unused-imports/no-unused-imports': 'warn',
 		'unused-imports/no-unused-vars': [
 			'warn',
