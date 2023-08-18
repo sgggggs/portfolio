@@ -1,0 +1,6 @@
+# automatic code generation
+src/api/$api.ts
+
+# next.js
+.next/
+out/
