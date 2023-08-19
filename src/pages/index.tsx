@@ -2,6 +2,7 @@ import Head from 'next/head';
 import useTranslation from 'next-translate/useTranslation';
 import { API_KEY_EXPERIENCE } from '@/api/constants';
 import { client } from '@/api/utils';
+import { useTheme } from '@/hooks/useTheme';
 import type { MicroCMSListExperience } from '@/api/types';
 import type { GetStaticProps, NextPage } from 'next';
 
@@ -11,6 +12,9 @@ type Props = {
 
 const Home: NextPage<Props> = ({ data }) => {
 	const { t } = useTranslation();
+
+	const { toggleTheme } = useTheme();
+
 	console.log(
 		data[API_KEY_EXPERIENCE].contents,
 		'TODO: Using this data to implement the component.',
@@ -25,6 +29,7 @@ const Home: NextPage<Props> = ({ data }) => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<p>{t('common:title')}</p>
+			<button onClick={toggleTheme}>{'Switch'}</button>
 		</>
 	);
 };
