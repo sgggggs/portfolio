@@ -34,3 +34,6 @@ __reports__
 /test-results/
 /playwright-report/
 /playwright/.cache/
+
+# coverage
+/coverage/
