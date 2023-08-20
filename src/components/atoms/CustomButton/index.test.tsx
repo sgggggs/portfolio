@@ -1,25 +1,27 @@
 import { composeStories } from '@storybook/react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import * as stories from './index.stories';
+import type { ReactElement } from 'react';
 
 const { Default, Disabled } = composeStories(stories);
 
-const setup = () => {
-	const button = screen.getByRole('button');
-	expect(button).toBeAtoms();
+const setup = (element: ReactElement) => {
+	const { container, getByRole } = render(element);
+	const button = getByRole('button', { name: 'CustomButton' });
+
+	expect(container).toBeAtoms();
 	expect(button).toBeInTheDocument();
+
 	return { button };
 };
 
 describe('CustomButton', () => {
 	test('Default', () => {
-		render(<Default />);
-		const { button } = setup();
+		const { button } = setup(<Default />);
 		expect(button).toBeEnabled();
 	});
 	test('Disabled', () => {
-		render(<Disabled />);
-		const { button } = setup();
+		const { button } = setup(<Disabled />);
 		expect(button).toBeDisabled();
 	});
 });

@@ -2,7 +2,7 @@
 to: <%= abs_path %>/index.test.tsx
 ---
 import { composeStories } from '@storybook/react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import * as stories from './index.stories';
 import type { ReactElement } from 'react';
 
