@@ -3,7 +3,7 @@ import { CustomButton } from './';
 
 export default {
 	component: CustomButton,
-	args: { type: 'button', text: 'Button', onClick: () => console.info('onClick') },
+	args: { type: 'button', text: 'CustomButton' },
 } as Meta<typeof CustomButton>;
 
 type Story = StoryObj<typeof CustomButton>;
