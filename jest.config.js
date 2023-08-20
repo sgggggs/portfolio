@@ -12,7 +12,7 @@ const customJestConfig = {
 	testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
 	testPathIgnorePatterns: ['<rootDir>/e2e/'],
 	testEnvironment: 'jest-environment-jsdom',
-	setupFilesAfterEnv: ['./jest.setup.ts', '<rootDir>/src/tests/customMatchers/index.ts'],
+	setupFilesAfterEnv: ['./jest.setup.ts', '<rootDir>/src/tests/customMatchers.ts'],
 	reporters: [
 		'default',
 		[
