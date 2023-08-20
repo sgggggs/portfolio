@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import * as styles from './style.css';
+import * as styles from './styles.css';
 
 export const BasicHeader: FC = () => {
 	return (
