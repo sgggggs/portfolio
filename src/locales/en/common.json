@@ -1,3 +1,6 @@
 {
-	"title": "Hello world"
+	"title": "Hello world",
+	"experience": "Experience",
+	"menuOpen": "Open menu",
+	"menuClose": "Close menu"
 }
