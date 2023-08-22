@@ -7,7 +7,7 @@ const { Default, Disabled } = composeStories(stories);
 
 const setup = (element: ReactElement) => {
 	const { container, getByRole } = render(element);
-	const button = getByRole('button', { name: 'CustomButton' });
+	const button = getByRole('button', { name: 'BaseButton' });
 
 	expect(container).toBeAtoms();
 	expect(button).toBeInTheDocument();
@@ -15,7 +15,7 @@ const setup = (element: ReactElement) => {
 	return { button };
 };
 
-describe('CustomButton', () => {
+describe('BaseButton', () => {
 	test('Default', () => {
 		const { button } = setup(<Default />);
 		expect(button).toBeEnabled();
