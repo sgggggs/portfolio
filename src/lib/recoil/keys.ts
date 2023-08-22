@@ -1,3 +1,3 @@
-export enum RecoilAtomKeys {
-	THEME_STATE = 'themeState',
-}
+export const RECOIL_ATOM_KEYS = {
+	THEME_STATE: 'themeState',
+} as const;

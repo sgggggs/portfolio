@@ -1,8 +1,8 @@
 import { atom } from 'recoil';
-import { RecoilAtomKeys } from '../keys';
+import { RECOIL_ATOM_KEYS } from '../keys';
 import type { Theme } from '@/utils/types';
 
 export const themeState = atom<Theme>({
-	key: RecoilAtomKeys.THEME_STATE,
+	key: RECOIL_ATOM_KEYS.THEME_STATE,
 	default: 'light',
 });
