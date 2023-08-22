@@ -1,12 +1,15 @@
 import { globalStyle } from '@vanilla-extract/css';
-import { vars } from './vars.css';
+import { theme } from '@/styles/theme.css';
 
 globalStyle(':root[data-theme="light"]', {
-	color: vars.theme.light.color,
-	background: vars.theme.light.background,
+	colorScheme: 'light',
 });
 
 globalStyle(':root[data-theme="dark"]', {
-	color: vars.theme.dark.color,
-	background: vars.theme.dark.background,
+	colorScheme: 'dark',
+});
+
+globalStyle('#theme', {
+	color: theme.text.normal,
+	background: theme.background.normal,
 });
