@@ -7,6 +7,7 @@ export const container = style({
 	display: 'flex',
 	justifyContent: 'space-between',
 	alignItems: 'center',
+	height: vars.header.height,
 	padding: `${vars.space[1]} ${vars.space[3]}`,
 	backdropFilter: 'blur(8px)',
 });
