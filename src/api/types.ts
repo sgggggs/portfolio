@@ -1,4 +1,10 @@
-import type { MicroCMSListResponse } from 'microcms-js-sdk';
+import type { MicroCMSDate, MicroCMSListResponse } from 'microcms-js-sdk';
+
+type About = {
+	body: string;
+};
+
+export type MicroCMSDataAbout = MicroCMSDate & About;
 
 type Experience = {
 	id: number;
