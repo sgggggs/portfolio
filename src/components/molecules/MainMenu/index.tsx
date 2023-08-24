@@ -12,9 +12,10 @@ export type MainMenuItems = {
 type Props = Readonly<{
 	items: MainMenuItems;
 	isOpen: boolean;
+	onToggle: () => void;
 }>;
 
-export const MainMenu: FC<Props> = ({ items, isOpen }) => {
+export const MainMenu: FC<Props> = ({ items, isOpen, onToggle }) => {
 	if (!items.length) {
 		return null;
 	}
@@ -23,7 +24,7 @@ export const MainMenu: FC<Props> = ({ items, isOpen }) => {
 		<ul className={clsx(styles.container, isOpen && styles.isOpen)}>
 			{items.map(({ id, title, href }) => (
 				<li key={id}>
-					<NextLink href={href} className={styles.link}>
+					<NextLink href={href} className={styles.link} onClick={onToggle}>
 						{title}
 					</NextLink>
 				</li>

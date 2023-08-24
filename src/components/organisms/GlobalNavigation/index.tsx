@@ -13,6 +13,11 @@ export const GlobalNavigation: FC = () => {
 	const mainMenuItems: MainMenuItems = useMemo(() => {
 		return [
 			{
+				id: 'about',
+				title: t('common:about'),
+				href: '#about',
+			},
+			{
 				id: 'experience',
 				title: t('common:experience'),
 				href: '#experience',
@@ -22,7 +27,7 @@ export const GlobalNavigation: FC = () => {
 
 	return (
 		<nav className={styles.container}>
-			<MainMenu items={mainMenuItems} isOpen={isOpenMainMenu} />
+			<MainMenu items={mainMenuItems} isOpen={isOpenMainMenu} onToggle={onToggleMainMenu} />
 			<MainMenuButton isOpen={isOpenMainMenu} onToggle={onToggleMainMenu} />
 		</nav>
 	);

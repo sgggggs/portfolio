@@ -1,6 +1,9 @@
 import { createGlobalTheme } from '@vanilla-extract/css';
 
 export const vars = createGlobalTheme(':root', {
+	header: {
+		height: '60px',
+	},
 	space: {
 		1: '8px',
 		2: '16px',
