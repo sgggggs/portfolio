@@ -22,6 +22,11 @@ export const GlobalNavigation: FC = () => {
 				title: t('common:experience'),
 				href: '#experience',
 			},
+			{
+				id: 'contact',
+				title: t('common:contact'),
+				href: '#contact',
+			},
 		];
 	}, [t]);
 

@@ -14,4 +14,7 @@ export const vars = createGlobalTheme(':root', {
 		7: '56px',
 		8: '64px',
 	},
+	layer: {
+		header: '10',
+	},
 });
