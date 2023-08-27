@@ -10,7 +10,9 @@ type Props = Readonly<{
 export const BaseSection: FC<Props> = ({ id, title, children }) => {
 	return (
 		<section className={styles.container} aria-labelledby={id}>
-			<h2 id={id}>{title}</h2>
+			<h2 id={id} className={styles.title}>
+				{title}
+			</h2>
 			{children}
 		</section>
 	);
