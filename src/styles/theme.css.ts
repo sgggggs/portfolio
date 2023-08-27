@@ -1,25 +1,37 @@
 import { createThemeContract, createTheme } from '@vanilla-extract/css';
 
 export const theme = createThemeContract({
+	object: {
+		normal: null,
+		accent: null,
+		shadow: null,
+	},
 	background: {
 		normal: null,
 		gradation: null,
 	},
-	primary: null,
 	text: {
 		normal: null,
+		bold: null,
+		shadow: null,
 	},
 });
 
 export const lightTheme = createTheme(theme, {
 	background: {
-		normal: '#FFF',
+		normal: '#fff',
 		gradation:
-			'linear-gradient(150deg, rgba(236,236,236,0.5312718837535014) 0%, rgba(54,54,54,0.7525603991596639) 78%, rgba(0,0,0,0.8562018557422969) 100%)',
+			'linear-gradient(150deg, rgba(223,223,223,0.6) 0%, rgba(180,180,180,0.6) 28%, rgba(145,145,145,0.5) 100%)',
 	},
-	primary: '#666',
+	object: {
+		normal: '#555',
+		accent: '#000',
+		shadow: '#eaeaea',
+	},
 	text: {
-		normal: '#666',
+		normal: '#555',
+		bold: '#111',
+		shadow: '#cfcfcf',
 	},
 });
 
@@ -27,10 +39,16 @@ export const darkTheme = createTheme(theme, {
 	background: {
 		normal: '#000',
 		gradation:
-			'linear-gradient(150deg, rgba(0,0,0,0.8001794467787114) 0%, rgba(54,54,54,0.7525603991596639) 78%, rgba(122,122,122,0.5312718837535014) 90%)',
+			'linear-gradient(150deg, rgba(0,0,0,0.8) 0%, rgba(54,54,54,0.7) 78%, rgba(122,122,122,0.5) 90%)',
 	},
-	primary: '#888',
+	object: {
+		normal: '#888',
+		accent: '#fafafa',
+		shadow: '#525252',
+	},
 	text: {
 		normal: '#888',
+		bold: '#d5d5d5',
+		shadow: '#2d2d2d',
 	},
 });
