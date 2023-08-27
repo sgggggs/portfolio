@@ -16,5 +16,10 @@ Object.defineProperty(window, 'matchMedia', {
 	})),
 });
 
+jest.mock('next/router', () => ({
+	__esModule: true,
+	useRouter: jest.fn(),
+}));
+
 global.React = React;
 global.TextEncoder = TextEncoder;
