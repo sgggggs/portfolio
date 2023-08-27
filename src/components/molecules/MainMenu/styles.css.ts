@@ -24,13 +24,14 @@ export const container = style({
 export const link = style({
 	display: 'block',
 	padding: vars.space[1],
-	fontSize: '20px',
+	fontSize: '26px',
 	fontWeight: 'bold',
-	color: 'inherit',
+	color: theme.object.normal,
 	textDecoration: 'none',
 
 	'@media': {
 		[media.screen.desktop]: {
+			fontSize: '18px',
 			padding: `${vars.space[1]} 0`,
 		},
 	},

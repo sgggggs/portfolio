@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import * as stories from './index.stories';
 import type { ReactElement } from 'react';
 
-const { Default } = composeStories(stories);
+const { Default, HybridColumn } = composeStories(stories);
 
 const setup = (element: ReactElement) => {
 	const { container } = render(element);
@@ -13,5 +13,8 @@ const setup = (element: ReactElement) => {
 describe('ContentWrapper', () => {
 	test('Default', () => {
 		setup(<Default />);
+	});
+	test('HybridColumn', () => {
+		setup(<HybridColumn />);
 	});
 });

@@ -6,7 +6,7 @@ const barStyle = {
 	content: '',
 	display: 'block',
 	height: '1px',
-	backgroundColor: theme.primary,
+	backgroundColor: theme.object.normal,
 	transition: 'transform .15s ease',
 };
 

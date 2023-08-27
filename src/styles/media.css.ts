@@ -5,4 +5,5 @@ export const media = {
 		tablet: MEDIA_SCREEN.TABLET,
 		desktop: MEDIA_SCREEN.DESKTOP,
 	},
+	hover: '(hover: hover)',
 };

@@ -10,4 +10,13 @@ export const container = style({
 	height: vars.header.height,
 	padding: `${vars.space[1]} ${vars.space[3]}`,
 	backdropFilter: 'blur(8px)',
+	zIndex: vars.layer.header,
+});
+
+export const inner = style({
+	display: 'flex',
+	justifyContent: 'flex-end',
+	width: '100%',
+	maxWidth: '1180px',
+	marginInline: 'auto',
 });

@@ -7,7 +7,7 @@ import { MainMenu } from './';
 
 export default {
 	component: MainMenu,
-	args: { items: createMainMenuItemsMock(4), isOpen: false },
+	args: { items: createMainMenuItemsMock(5), isOpen: false },
 } as Meta<typeof MainMenu>;
 
 type Story = StoryObj<typeof MainMenu>;
