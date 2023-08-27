@@ -1,17 +1,45 @@
-import type { MicroCMSDate, MicroCMSListResponse } from 'microcms-js-sdk';
+import type { Locales } from '@/utils/types';
+import type { MicroCMSImage, MicroCMSListResponse, MicroCMSContentId } from 'microcms-js-sdk';
 
-type About = {
-	body: string;
+// MicroCMS
+export type I18nSchema = Locales;
+
+type CustomMicroCMSListResponse<T> = Pick<
+	MicroCMSListResponse<T>,
+	'totalCount' | 'limit' | 'offset'
+> & {
+	contents: (T & MicroCMSContentId)[];
 };
 
-export type MicroCMSDataAbout = MicroCMSDate & About;
+export type MicroCMSAbout = Omit<About, 'description' | 'profileImageUrl'> & {
+	description: I18nSchema;
+	profileImage: MicroCMSImage;
+};
 
-type Experience = {
-	id: number;
+export type MicroCMSListExperience = CustomMicroCMSListResponse<
+	Omit<Experience, 'title' | 'body'> & {
+		title: I18nSchema;
+		body: I18nSchema;
+	}
+>;
+
+// About
+export type About = {
+	displayName: string;
+	profession: string;
+	description: string;
+	email: string;
+	linkedInUrl: string;
+	githubUrl: string;
+	profileImageUrl: string;
+};
+
+// Experience
+export type Experience = {
+	id: string;
 	title: string;
 	body: string;
-	tags: [];
-	date: string;
+	startDate: string;
+	endDate: string;
+	skills: string[];
 };
-
-export type MicroCMSListExperience = MicroCMSListResponse<Experience>;

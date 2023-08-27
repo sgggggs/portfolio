@@ -1,5 +1,7 @@
 export const THEME = ['light', 'dark'] as const;
 
+export const LOCALES = ['en', 'ja'] as const;
+
 export const BREAKPOINT = {
 	TABLET: 768,
 	DESKTOP: 1024,
