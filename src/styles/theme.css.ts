@@ -1,14 +1,18 @@
 import { createThemeContract, createTheme } from '@vanilla-extract/css';
 
 export const theme = createThemeContract({
+	background: {
+		normal: null,
+		gradation: null,
+	},
 	object: {
 		normal: null,
 		accent: null,
 		shadow: null,
 	},
-	background: {
+	stroke: {
 		normal: null,
-		gradation: null,
+		accent: null,
 	},
 	text: {
 		normal: null,
@@ -28,6 +32,10 @@ export const lightTheme = createTheme(theme, {
 		accent: '#000',
 		shadow: '#eaeaea',
 	},
+	stroke: {
+		normal: '#dddddd',
+		accent: '#9a9a9a',
+	},
 	text: {
 		normal: '#555',
 		bold: '#111',
@@ -45,6 +53,10 @@ export const darkTheme = createTheme(theme, {
 		normal: '#888',
 		accent: '#fafafa',
 		shadow: '#525252',
+	},
+	stroke: {
+		normal: '#2e2e2e',
+		accent: '#9a9a9a',
 	},
 	text: {
 		normal: '#888',

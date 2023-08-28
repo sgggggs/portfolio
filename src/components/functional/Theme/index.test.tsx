@@ -22,10 +22,10 @@ describe('Theme', () => {
 	test('Default', () => {
 		setup(<ThemeProvider>{'children'}</ThemeProvider>);
 	});
-	test('should be no issue even when the dark theme is selected', () => {
+	test('should be no issue even when the light theme is selected', () => {
 		jest.spyOn(useThemeHook, 'useTheme').mockImplementation(() => {
 			return {
-				theme: 'dark',
+				theme: 'light',
 				toggleTheme: () => jest.fn(),
 			};
 		});
