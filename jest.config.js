@@ -7,7 +7,11 @@ const createJestConfig = nextJest({
 const customJestConfig = {
 	collectCoverage: false,
 	coverageDirectory: 'coverage',
-	coveragePathIgnorePatterns: ['<rootDir>/src/.*/constants\\.ts$'],
+	coveragePathIgnorePatterns: [
+		'<rootDir>/src/.*/constants\\.ts$',
+		'<rootDir>/src/tests/mocks/',
+		'<rootDir>/src/components/icons/',
+	],
 	moduleDirectories: ['node_modules', '<rootDir>/'],
 	moduleNameMapper: { '^@/(.*)$': '<rootDir>/src/$1' },
 	testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
