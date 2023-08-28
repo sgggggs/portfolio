@@ -1,3 +1,4 @@
+import { BaseLink } from '@/components/atoms/BaseLink';
 import type { FC, ReactNode } from 'react';
 import * as styles from './styles.css';
 
@@ -18,9 +19,9 @@ export const SnsList: FC<Props> = ({ items }) => {
 		<ul className={styles.container}>
 			{items.map(({ label, icon, href }, i) => (
 				<li key={`${label}${i}`}>
-					<a href={href} target="_brank" rel="noopener" aria-label={label} className={styles.link}>
-						{icon}
-					</a>
+					<BaseLink href={href} label={label} isExternal>
+						<span className={styles.link}>{icon}</span>
+					</BaseLink>
 				</li>
 			))}
 		</ul>
