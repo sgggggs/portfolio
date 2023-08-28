@@ -21,13 +21,12 @@ export const container = style({
 	},
 });
 
-export const link = style({
+export const item = style({
 	display: 'block',
 	padding: vars.space[1],
 	fontSize: '26px',
 	fontWeight: 'bold',
 	color: theme.object.normal,
-	textDecoration: 'none',
 
 	'@media': {
 		[media.screen.desktop]: {

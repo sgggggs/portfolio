@@ -1,3 +1,4 @@
+import { BaseLink } from '@/components/atoms/BaseLink';
 import { BaseSection } from '@/components/atoms/BaseSection';
 import type { FC } from 'react';
 import * as styles from './styles.css';
@@ -13,9 +14,9 @@ export const ContactSection: FC<Props> = ({ sectionId, sectionTitle, email }) =>
 
 	return (
 		<BaseSection id={sectionId} title={sectionTitle}>
-			<a href={formattedEmail} className={styles.email}>
-				{email}
-			</a>
+			<div className={styles.email}>
+				<BaseLink href={formattedEmail}>{email}</BaseLink>
+			</div>
 		</BaseSection>
 	);
 };
