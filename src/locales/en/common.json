@@ -2,6 +2,12 @@
 	"about": "About",
 	"contact": "Contact",
 	"experience": "Experience",
+	"english": "English",
+	"japanese": "Japanese",
 	"menuOpen": "Open menu",
-	"menuClose": "Close menu"
+	"menuClose": "Close menu",
+	"languageSettingOpen": "Open language setting",
+	"languageSettingClose": "Close language setting",
+	"switch2DarkTheme": "Switch to dark theme",
+	"switch2LightTheme": "Switch to light theme"
 }
