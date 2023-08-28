@@ -18,7 +18,7 @@ export const ABOUT_MOCK: About = {
 	profileImageUrl: 'https://doodleipsum.com/40x40/',
 };
 
-export const MICRO_CMS_ABOUT: MicroCMSAbout = {
+export const MICRO_CMS_ABOUT_MOCK: MicroCMSAbout = {
 	displayName: 'AboutDisplayName',
 	description: createI18nSchemaMock(ABOUT_DESCRIPTION_MOCK),
 	profession: 'AboutProfession',

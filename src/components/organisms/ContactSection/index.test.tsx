@@ -8,7 +8,7 @@ const { Default } = composeStories(stories);
 
 const setup = (element: ReactElement) => {
 	const { container, getByRole } = render(element);
-	const section = getByRole('region', { name: stories.CONTACT_SECTION_TITLE });
+	const section = getByRole('region', { name: 'Contact' });
 	const link = getByRole('link', { name: ABOUT_MOCK.email });
 
 	expect(container).toBeOrganisms();
