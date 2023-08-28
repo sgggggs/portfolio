@@ -1,16 +1,19 @@
 import useTranslation from 'next-translate/useTranslation';
 import { useMemo } from 'react';
-import { useToggle } from 'react-use';
 import { MainMenuButton } from '@/components/atoms/MainMenuButton';
-import { MainMenu, type MainMenuItems } from '@/components/molecules/MainMenu';
+import { MainMenu, type MainMenuItem } from '@/components/molecules/MainMenu';
 import type { FC } from 'react';
 import * as styles from './styles.css';
 
-export const GlobalNavigation: FC = () => {
-	const { t } = useTranslation();
-	const [isOpenMainMenu, onToggleMainMenu] = useToggle(false);
+type Props = Readonly<{
+	isOpenMainMenu: boolean;
+	onToggleMainMenu: () => void;
+}>;
 
-	const mainMenuItems: MainMenuItems = useMemo(() => {
+export const GlobalNavigation: FC<Props> = ({ isOpenMainMenu, onToggleMainMenu }) => {
+	const { t } = useTranslation();
+
+	const mainMenuItems: MainMenuItem[] = useMemo(() => {
 		return [
 			{
 				id: 'about',
@@ -32,8 +35,8 @@ export const GlobalNavigation: FC = () => {
 
 	return (
 		<nav className={styles.container}>
-			<MainMenu items={mainMenuItems} isOpen={isOpenMainMenu} onToggle={onToggleMainMenu} />
 			<MainMenuButton isOpen={isOpenMainMenu} onToggle={onToggleMainMenu} />
+			<MainMenu items={mainMenuItems} isOpen={isOpenMainMenu} onToggle={onToggleMainMenu} />
 		</nav>
 	);
 };

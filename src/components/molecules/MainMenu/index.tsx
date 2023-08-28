@@ -1,16 +1,16 @@
 import clsx from 'clsx';
-import NextLink from 'next/link';
+import { BaseLink } from '@/components/atoms/BaseLink';
 import type { FC } from 'react';
 import * as styles from './styles.css';
 
-export type MainMenuItems = {
+export type MainMenuItem = {
 	id: string;
 	title: string;
 	href: string;
-}[];
+};
 
 type Props = Readonly<{
-	items: MainMenuItems;
+	items: MainMenuItem[];
 	isOpen: boolean;
 	onToggle: () => void;
 }>;
@@ -23,10 +23,10 @@ export const MainMenu: FC<Props> = ({ items, isOpen, onToggle }) => {
 	return (
 		<ul className={clsx(styles.container, isOpen && styles.isOpen)}>
 			{items.map(({ id, title, href }) => (
-				<li key={id}>
-					<NextLink href={href} className={styles.link} onClick={onToggle}>
+				<li key={id} className={styles.item}>
+					<BaseLink href={href} onClick={isOpen ? onToggle : undefined}>
 						{title}
-					</NextLink>
+					</BaseLink>
 				</li>
 			))}
 		</ul>

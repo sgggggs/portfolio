@@ -7,7 +7,7 @@ const { Default } = composeStories(stories);
 
 const setup = (element: ReactElement) => {
 	const { container, getByRole } = render(element);
-	const section = getByRole('region', { name: stories.ABOUT_SECTION_TITLE });
+	const section = getByRole('region', { name: 'About' });
 
 	expect(container).toBeOrganisms();
 	expect(section).toBeInTheDocument();
