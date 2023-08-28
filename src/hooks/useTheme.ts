@@ -11,7 +11,7 @@ export const useTheme = (): UseThemeReturnType => {
 	const [theme, setTheme] = useRecoilState(themeState);
 
 	const toggleTheme = () => {
-		const newTheme = theme === 'light' ? 'dark' : 'light';
+		const newTheme = theme === 'dark' ? 'light' : 'dark';
 		setTheme(newTheme);
 		window.localStorage.setItem('theme', newTheme);
 		const root = window.document.documentElement;

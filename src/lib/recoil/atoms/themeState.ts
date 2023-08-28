@@ -4,5 +4,5 @@ import type { Theme } from '@/utils/types';
 
 export const themeState = atom<Theme>({
 	key: RECOIL_ATOM_KEYS.THEME_STATE,
-	default: 'light',
+	default: 'dark',
 });
