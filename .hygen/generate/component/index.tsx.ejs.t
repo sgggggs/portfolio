@@ -3,7 +3,7 @@ to: <%= abs_path %>/index.tsx
 ---
 import type { FC } from "react";
 <% if (have_style) { -%>
-import * as styles from "./style.css"
+import * as styles from "./styles.css"
 <% } -%>
 <% if (have_props) { -%>
 

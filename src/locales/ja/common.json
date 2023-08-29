@@ -1,3 +1,15 @@
 {
-	"title": "ハローワールド"
+	"about": "About",
+	"back2Home": "ホームに戻る",
+	"contact": "Contact",
+	"experience": "Experience",
+	"english": "English",
+	"japanese": "日本語",
+	"languageSettingOpen": "言語設定を開く",
+	"languageSettingClose": "言語設定を閉じる",
+	"menuOpen": "メニューを開く",
+	"menuClose": "メニューを閉じる",
+	"pageNotFound": "このページは見つかりませんでした。",
+	"switch2DarkTheme": "ダークテーマに切り替える",
+	"switch2LightTheme": "ライトテーマに切り替える"
 }
