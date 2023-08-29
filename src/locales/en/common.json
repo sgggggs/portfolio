@@ -1,13 +1,15 @@
 {
 	"about": "About",
+	"back2Home": "Back to home",
 	"contact": "Contact",
 	"experience": "Experience",
 	"english": "English",
 	"japanese": "Japanese",
-	"menuOpen": "Open menu",
-	"menuClose": "Close menu",
 	"languageSettingOpen": "Open language setting",
 	"languageSettingClose": "Close language setting",
+	"menuOpen": "Open menu",
+	"menuClose": "Close menu",
+	"pageNotFound": "This page could not be found.",
 	"switch2DarkTheme": "Switch to dark theme",
 	"switch2LightTheme": "Switch to light theme"
 }
