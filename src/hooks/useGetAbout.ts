@@ -28,6 +28,7 @@ export const useGetAbout = (content: UseGetAboutArgs): UseGetAboutReturnType => 
 			linkedInUrl,
 			githubUrl,
 			description: content.description[locale],
+			biography: content.biography[locale],
 			profileImageUrl: content.profileImage.url,
 		};
 

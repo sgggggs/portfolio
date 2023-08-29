@@ -11,9 +11,10 @@ type CustomMicroCMSListResponse<T> = Pick<
 	contents: (T & MicroCMSContentId)[];
 };
 
-export type MicroCMSAbout = Omit<About, 'description' | 'profileImageUrl'> & {
+export type MicroCMSAbout = Omit<About, 'description' | 'profileImageUrl' | 'biography'> & {
 	description: I18nSchema;
 	profileImage: MicroCMSImage;
+	biography: I18nSchema;
 };
 
 export type MicroCMSListExperience = CustomMicroCMSListResponse<
@@ -27,6 +28,7 @@ export type MicroCMSListExperience = CustomMicroCMSListResponse<
 export type About = {
 	displayName: string;
 	profession: string;
+	biography: string;
 	description: string;
 	email: string;
 	linkedInUrl: string;
