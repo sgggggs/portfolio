@@ -12,6 +12,7 @@ export const ABOUT_MOCK: About = {
 	displayName: 'AboutDisplayName',
 	description: ABOUT_DESCRIPTION_MOCK,
 	profession: 'AboutProfession',
+	biography: 'AboutBiography',
 	email: 'AboutEmail',
 	linkedInUrl: 'AboutLinkedInUrl',
 	githubUrl: 'AboutGithubUrl',
@@ -19,12 +20,13 @@ export const ABOUT_MOCK: About = {
 };
 
 export const MICRO_CMS_ABOUT_MOCK: MicroCMSAbout = {
-	displayName: 'AboutDisplayName',
+	displayName: ABOUT_MOCK.displayName,
 	description: createI18nSchemaMock(ABOUT_DESCRIPTION_MOCK),
-	profession: 'AboutProfession',
-	email: 'AboutEmail',
-	linkedInUrl: 'AboutLinkedInUrl',
-	githubUrl: 'AboutGithubUrl',
+	profession: ABOUT_MOCK.profession,
+	biography: createI18nSchemaMock(ABOUT_MOCK.biography),
+	email: ABOUT_MOCK.email,
+	linkedInUrl: ABOUT_MOCK.linkedInUrl,
+	githubUrl: ABOUT_MOCK.githubUrl,
 	profileImage: {
 		width: 40,
 		height: 40,
