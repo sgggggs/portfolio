@@ -11,7 +11,6 @@ export const trigger = style({
 	padding: `0 ${vars.space[1]}`,
 	fontSize: '14px',
 	letterSpacing: '.2px',
-	color: theme.object.normal,
 	background: 'none',
 	borderRadius: '32px',
 	border: `1px solid ${theme.object.normal}`,

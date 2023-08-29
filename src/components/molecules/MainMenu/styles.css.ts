@@ -6,8 +6,8 @@ import { vars } from '@/styles/vars.css';
 export const container = style({
 	display: 'none',
 	flexDirection: 'column',
-	gap: vars.space[2],
-	padding: `${vars.space[2]} ${vars.space[3]}`,
+	gap: vars.space[4],
+	padding: `${vars.space[5]} ${vars.space[2]} `,
 	overflow: 'auto',
 	listStyle: 'none',
 	margin: 0,
@@ -16,6 +16,7 @@ export const container = style({
 		[media.screen.desktop]: {
 			display: 'flex',
 			flexDirection: 'row',
+			gap: vars.space[3],
 			padding: 0,
 		},
 	},

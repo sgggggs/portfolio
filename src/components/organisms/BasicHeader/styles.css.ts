@@ -8,7 +8,7 @@ export const container = style({
 	justifyContent: 'space-between',
 	alignItems: 'center',
 	height: vars.header.height,
-	padding: `${vars.space[1]} ${vars.space[3]}`,
+	padding: `${vars.space[1]} ${vars.space[2]}`,
 	backdropFilter: 'blur(8px)',
 	zIndex: vars.layer.header,
 });

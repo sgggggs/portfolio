@@ -7,6 +7,9 @@ export const container = style({
 	display: 'flex',
 	justifyContent: 'center',
 
+	// NOTE: Preventing ios safari layering bug
+	willChange: 'transform',
+
 	'@media': {
 		[media.screen.desktop]: {
 			marginTop: vars.space[8],
