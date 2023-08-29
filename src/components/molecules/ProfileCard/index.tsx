@@ -106,6 +106,7 @@ export const ProfileCard: FC<Props> = ({
 							height={44}
 							alt=""
 							className={styles.profileImage}
+							priority
 						/>
 					)}
 				</div>

@@ -7,6 +7,6 @@ export const container = style({
 	minHeight: '100vh',
 });
 
-export const isOpenMainMenu = style({
+export const isEnableBlur = style({
 	filter: 'blur(5px)',
 });

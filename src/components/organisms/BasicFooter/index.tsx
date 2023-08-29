@@ -29,7 +29,9 @@ export const BasicFooter: FC = () => {
 					</BaseButton>
 				</div>
 
-				<LanguageSettingContainer />
+				<div className={styles.languageSetting}>
+					<LanguageSettingContainer />
+				</div>
 			</div>
 			<small className={styles.copyright}>&copy; {COPYRIGHT}</small>
 		</footer>

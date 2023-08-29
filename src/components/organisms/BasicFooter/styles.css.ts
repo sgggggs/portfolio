@@ -7,11 +7,11 @@ export const container = style({
 	flexDirection: 'column',
 	alignItems: 'flex-end',
 	gap: vars.space[1],
-	padding: `calc(${vars.space[8]} * 2) ${vars.space[4]} ${vars.space[2]}`,
+	padding: `calc(${vars.space[8]} * 2) ${vars.space[2]} ${vars.space[2]}`,
 
 	'@media': {
 		[media.screen.desktop]: {
-			paddingTop: vars.space[8],
+			padding: `${vars.space[8]} ${vars.space[4]} ${vars.space[2]}`,
 		},
 	},
 });
@@ -28,7 +28,13 @@ export const themeIcon = style({
 	height: '44px',
 });
 
+const VISUAL_ALIGNMENT_OFFSET = '4px';
+export const languageSetting = style({
+	marginBottom: VISUAL_ALIGNMENT_OFFSET,
+});
+
 export const copyright = style({
 	display: 'flex',
 	justifyContent: 'flex-end',
+	letterSpacing: '.1px',
 });
