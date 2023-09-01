@@ -1,4 +1,4 @@
-import { GithubIcon } from '@/components/icons/GithubIcon';
+import { GithubIcon } from '@/components/icons';
 import { createI18nSchemaMock } from './createI18nSchemaMock';
 import type { About, MicroCMSAbout } from '@/api/types';
 import type { SnsItem } from '@/components/molecules/SnsList';
