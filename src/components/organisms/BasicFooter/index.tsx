@@ -1,9 +1,9 @@
 import useTranslation from 'next-translate/useTranslation';
 import { useMemo, type FC } from 'react';
 import { BaseButton } from '@/components/atoms/BaseButton';
-import { LanguageSettingContainer } from '@/components/atoms/LanguageSetting';
-import { MoonIcon } from '@/components/icons/MoonIcon';
-import { SunIcon } from '@/components/icons/SunIcon';
+import { LanguageSetting } from '@/components/atoms/LanguageSetting';
+import { SunIcon } from '@/components/icons';
+import { MoonIcon } from '@/components/icons';
 import { useTheme } from '@/hooks/useTheme';
 import * as styles from './styles.css';
 
@@ -30,7 +30,7 @@ export const BasicFooter: FC = () => {
 				</div>
 
 				<div className={styles.languageSetting}>
-					<LanguageSettingContainer />
+					<LanguageSetting />
 				</div>
 			</div>
 			<small className={styles.copyright}>&copy; {COPYRIGHT}</small>

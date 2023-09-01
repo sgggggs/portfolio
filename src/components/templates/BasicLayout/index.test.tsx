@@ -36,6 +36,10 @@ describe('BasicLayout', () => {
 		});
 	});
 
+	afterAll(() => {
+		jest.clearAllMocks();
+	});
+
 	test('Default', () => {
 		setup(<Default />);
 	});
@@ -45,9 +49,5 @@ describe('BasicLayout', () => {
 			return [IS_OPEN_MAIN_MENU_MOCK, ON_TOGGLE_MAIN_MENU_MOCK];
 		});
 		setup(<Default />);
-	});
-
-	afterAll(() => {
-		jest.clearAllMocks();
 	});
 });

@@ -11,7 +11,7 @@ describe('useTheme', () => {
 		expect(result.current.theme).toEqual('dark');
 	});
 
-	test('Executing toggleTheme switches the theme value.', () => {
+	test('should switch the theme value when toggleTheme is executed', () => {
 		const { result } = renderHook(() => useTheme(), {
 			wrapper: RecoilRoot,
 		});
