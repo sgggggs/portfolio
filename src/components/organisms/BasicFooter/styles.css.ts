@@ -11,7 +11,7 @@ export const container = style({
 
 	'@media': {
 		[media.screen.desktop]: {
-			padding: `${vars.space[8]} ${vars.space[4]} ${vars.space[2]}`,
+			padding: `calc(${vars.space[8]} * 2)  ${vars.space[4]} ${vars.space[2]}`,
 		},
 	},
 });

@@ -16,6 +16,7 @@ export const title = style({
 export const body = style({
 	marginTop: vars.space[2],
 	lineHeight: 1.6,
+	whiteSpace: 'pre-wrap',
 });
 
 export const tagList = style({

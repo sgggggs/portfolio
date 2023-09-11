@@ -26,6 +26,11 @@ export const GlobalNavigation: FC<Props> = ({ isOpenMainMenu, onToggleMainMenu }
 				href: '#experience',
 			},
 			{
+				id: 'showcase',
+				title: t('common:showcase'),
+				href: '#showcase',
+			},
+			{
 				id: 'contact',
 				title: t('common:contact'),
 				href: '#contact',

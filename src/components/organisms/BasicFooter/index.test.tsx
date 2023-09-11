@@ -34,6 +34,10 @@ describe('BasicFooter', () => {
 		});
 	});
 
+	afterAll(() => {
+		jest.clearAllMocks();
+	});
+
 	test('Default', () => {
 		const { getByRole } = setup(<Default />);
 		const themeSwitchButton = getByRole('button', { name: 'common:switch2LightTheme' });
@@ -49,9 +53,5 @@ describe('BasicFooter', () => {
 		const { getByRole } = setup(<Default />);
 		const themeSwitchButton = getByRole('button', { name: 'common:switch2DarkTheme' });
 		expect(themeSwitchButton).toBeInTheDocument();
-	});
-
-	afterAll(() => {
-		jest.clearAllMocks();
 	});
 });

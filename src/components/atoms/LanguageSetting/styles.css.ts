@@ -23,15 +23,6 @@ export const content = style({
 	alignItems: 'flex-end',
 });
 
-export const close = style({
-	display: 'flex',
-	justifyContent: 'flex-end',
-	alignItems: 'center',
-	width: '44px',
-	height: '44px',
-	transform: 'translateX(4px)',
-});
-
 export const list = style({
 	display: 'flex',
 	flexDirection: 'column',

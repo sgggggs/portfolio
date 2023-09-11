@@ -1,15 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { LanguageSettingProvider } from '.';
+import { LanguageSetting } from '.';
 
 export default {
-	component: LanguageSettingProvider,
-	args: { isEnableCloseButton: false },
-} as Meta<typeof LanguageSettingProvider>;
+	component: LanguageSetting,
+} as Meta<typeof LanguageSetting>;
 
-type Story = StoryObj<typeof LanguageSettingProvider>;
+type Story = StoryObj<typeof LanguageSetting>;
 
 export const Default: Story = {};
-
-export const EnableCloseButton: Story = {
-	args: { isEnableCloseButton: true },
-};
