@@ -1,15 +1,14 @@
 import * as Popover from '@radix-ui/react-popover';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
-import { useMemo, type FC } from 'react';
+import { useMemo, type FC, useCallback } from 'react';
 import { GlobeIcon } from '@/components/icons';
 import { BaseButton } from '../BaseButton';
-import { BaseLink } from '../BaseLink';
 import * as styles from './styles.css';
 
 export const LanguageSetting: FC = () => {
 	const { t } = useTranslation();
-	const { locale } = useRouter();
+	const { locale, push, asPath } = useRouter();
 
 	const languageItems = useMemo(
 		() => [
@@ -29,6 +28,21 @@ export const LanguageSetting: FC = () => {
 		[locale, languageItems],
 	)[0].label;
 
+	const handleChangeRouterLocale = useCallback(
+		async (locale: string) => {
+			const mainElement = document.querySelector('main');
+			if (!mainElement) {
+				return;
+			}
+			mainElement.tabIndex = 0;
+			mainElement.focus();
+			mainElement.removeAttribute('tabIndex');
+			window.scrollTo(0, 0);
+			await push(asPath, asPath, { locale });
+		},
+		[push, asPath],
+	);
+
 	return (
 		<Popover.Root>
 			<Popover.Trigger asChild>
@@ -44,10 +58,10 @@ export const LanguageSetting: FC = () => {
 				<ul className={styles.list}>
 					{filteredLanguageItems.map(({ label, locale }, i) => (
 						<li key={`${label}${i}`} className={styles.item}>
-							<Popover.Close asChild type={undefined}>
-								<BaseLink href="/" locale={locale}>
+							<Popover.Close asChild>
+								<BaseButton type="button" onClick={() => void handleChangeRouterLocale(locale)}>
 									<span className={styles.linkInner}>{label}</span>
-								</BaseLink>
+								</BaseButton>
 							</Popover.Close>
 						</li>
 					))}
