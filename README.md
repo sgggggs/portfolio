@@ -1,7 +1,9 @@
 ## My Portfolio Site
 Thank you for taking the time to view this repository! 👋
 
-This repo serves as the foundation for my portfolio website. For more detailed information, please refer to the link below.
+This repo serves as the foundation for my portfolio website. 
+
+For more detailed information, please refer to the [document](https://sgggggs.notion.site/sgggggs/Portfolio-e56f5d0dd3464752b9dcbfee27f50379).
 
 ## License
 
