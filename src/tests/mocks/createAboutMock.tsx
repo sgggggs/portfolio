@@ -16,7 +16,7 @@ export const ABOUT_MOCK: About = {
 	email: 'AboutEmail',
 	linkedInUrl: 'AboutLinkedInUrl',
 	githubUrl: 'AboutGithubUrl',
-	profileImageUrl: 'https://doodleipsum.com/40x40/',
+	profileImageUrl: '/favicons/favicon-32x32.png',
 };
 
 export const MICRO_CMS_ABOUT_MOCK: MicroCMSAbout = {
