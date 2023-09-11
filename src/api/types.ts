@@ -24,6 +24,14 @@ export type MicroCMSListExperience = CustomMicroCMSListResponse<
 	}
 >;
 
+export type MicroCMSListShowcase = CustomMicroCMSListResponse<
+	Omit<Showcase, 'title' | 'label' | 'thumbnailUrl'> & {
+		title: I18nSchema;
+		label: I18nSchema;
+		thumbnail: MicroCMSImage;
+	}
+>;
+
 // About
 export type About = {
 	displayName: string;
@@ -44,4 +52,13 @@ export type Experience = {
 	startDate: string;
 	endDate: string;
 	skills: string[];
+};
+
+// Showcase
+export type Showcase = {
+	id: string;
+	title: string;
+	label: string;
+	thumbnailUrl: string;
+	contentUrl: string;
 };
