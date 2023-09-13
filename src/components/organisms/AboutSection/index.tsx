@@ -5,7 +5,7 @@ import * as styles from './styles.css';
 type Props = Readonly<{
 	sectionId: string;
 	sectionTitle: string;
-	description: string | undefined;
+	description: string;
 }>;
 
 export const AboutSection: FC<Props> = ({ sectionId, sectionTitle, description }) => {

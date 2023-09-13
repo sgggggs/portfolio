@@ -6,7 +6,7 @@ import * as styles from './styles.css';
 type Props = Readonly<{
 	sectionId: string;
 	sectionTitle: string;
-	email: string | undefined;
+	email: string;
 }>;
 
 export const ContactSection: FC<Props> = ({ sectionId, sectionTitle, email }) => {

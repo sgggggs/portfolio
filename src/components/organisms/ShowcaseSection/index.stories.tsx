@@ -7,7 +7,7 @@ export default {
 	args: {
 		sectionId: 'showcase',
 		sectionTitle: 'Showcase',
-		items: createShowcaseItemsMock(5),
+		items: createShowcaseItemsMock(),
 	},
 } as Meta<typeof ShowcaseSection>;
 
