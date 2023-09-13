@@ -10,7 +10,7 @@ export type ShowcaseItem = {
 	contentUrl: string;
 };
 
-type Props = Readonly<{ items: ShowcaseItem[] | undefined }>;
+type Props = Readonly<{ items: ShowcaseItem[] }>;
 
 export const ShowcaseList: FC<Props> = ({ items }) => {
 	if (!items || !items.length) {

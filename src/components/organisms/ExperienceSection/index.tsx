@@ -6,7 +6,7 @@ import type { FC } from 'react';
 type Props = Readonly<{
 	sectionId: string;
 	sectionTitle: string;
-	items: Experience[] | undefined;
+	items: Experience[];
 }>;
 
 export const ExperienceSection: FC<Props> = ({ sectionId, sectionTitle, items }) => {

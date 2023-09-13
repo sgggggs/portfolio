@@ -4,7 +4,7 @@ import type { Experience } from '@/api/types';
 import * as styles from './styles.css';
 
 type Props = Readonly<{
-	items: Experience[] | undefined;
+	items: Experience[];
 }>;
 
 export const ExperienceList: FC<Props> = ({ items }) => {

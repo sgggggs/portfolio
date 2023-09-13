@@ -7,7 +7,7 @@ import { ShowcaseList } from '.';
 
 export default {
 	component: ShowcaseList,
-	args: { items: createShowcaseItemsMock(5) },
+	args: { items: createShowcaseItemsMock() },
 } as Meta<typeof ShowcaseList>;
 
 type Story = StoryObj<typeof ShowcaseList>;

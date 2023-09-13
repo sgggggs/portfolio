@@ -1,6 +1,7 @@
 import { createI18nSchemaMock } from './createI18nSchemaMock';
 import type { Showcase, MicroCMSListShowcase } from '@/api/types';
 
+export const SHOWCASE_ITEMS_DEFAULT_LENGTH = 5;
 export const SHOWCASE_ITEMS_NUMEROUS_LENGTH = 10;
 
 export const SHOWCASE_MOCK: Showcase = {
@@ -11,7 +12,9 @@ export const SHOWCASE_MOCK: Showcase = {
 	contentUrl: '/',
 };
 
-export const createShowcaseItemsMock = (length: number): Showcase[] => {
+export const createShowcaseItemsMock = (
+	length: number = SHOWCASE_ITEMS_DEFAULT_LENGTH,
+): Showcase[] => {
 	return Array.from({ length }, (_, i) => {
 		return {
 			id: `${SHOWCASE_MOCK.id}${i}`,
@@ -23,7 +26,9 @@ export const createShowcaseItemsMock = (length: number): Showcase[] => {
 	});
 };
 
-export const createMicroCMSShowcaseListMock = (length: number): MicroCMSListShowcase => {
+export const createMicroCMSShowcaseListMock = (
+	length: number = SHOWCASE_ITEMS_DEFAULT_LENGTH,
+): MicroCMSListShowcase => {
 	const contents = Array.from({ length }, (_, i) => {
 		return {
 			id: `${SHOWCASE_MOCK.id}${i}`,
@@ -39,5 +44,3 @@ export const createMicroCMSShowcaseListMock = (length: number): MicroCMSListShow
 	});
 	return { contents, totalCount: length, limit: 10, offset: 0 };
 };
-
-export const MICRO_CMS_SHOWCASE_LIST_MOCK: MicroCMSListShowcase = createMicroCMSShowcaseListMock(5);
