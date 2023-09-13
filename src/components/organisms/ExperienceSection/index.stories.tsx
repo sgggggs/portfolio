@@ -7,7 +7,7 @@ export default {
 	args: {
 		sectionId: 'experience',
 		sectionTitle: 'Experience',
-		items: createExperienceItemsMock(5),
+		items: createExperienceItemsMock(),
 	},
 } as Meta<typeof ExperienceSection>;
 

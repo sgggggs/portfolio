@@ -20,11 +20,11 @@ const calcX = (y: number) => -(y - window.innerHeight / 2) / 80;
 const calcY = (x: number) => (x - window.innerHeight / 2) / 80;
 
 type Props = Readonly<{
-	displayName: string | undefined;
-	profession: string | undefined;
-	githubUrl: string | undefined;
-	linkedInUrl: string | undefined;
-	profileImageUrl: string | undefined;
+	displayName: string;
+	profession: string;
+	githubUrl: string;
+	linkedInUrl: string;
+	profileImageUrl: string;
 }>;
 
 export const ProfileCard: FC<Props> = ({

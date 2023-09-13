@@ -7,7 +7,7 @@ import { ExperienceList } from '.';
 
 export default {
 	component: ExperienceList,
-	args: { items: createExperienceItemsMock(5) },
+	args: { items: createExperienceItemsMock() },
 } as Meta<typeof ExperienceList>;
 
 type Story = StoryObj<typeof ExperienceList>;
