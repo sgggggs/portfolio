@@ -1,6 +1,7 @@
 import { createI18nSchemaMock } from './createI18nSchemaMock';
 import type { Experience, MicroCMSListExperience } from '@/api/types';
 
+export const EXPERIENCE_ITEMS_DEFAULT_LENGTH = 5;
 export const EXPERIENCE_ITEMS_NUMEROUS_LENGTH = 10;
 export const EXPERIENCE_SKILLS_NUMEROUS_LENGTH = 30;
 
@@ -17,7 +18,9 @@ export const EXPERIENCE_MOCK: Experience = {
 	skills: createExperienceSkillsMock(3),
 };
 
-export const createExperienceItemsMock = (length: number): Experience[] => {
+export const createExperienceItemsMock = (
+	length: number = EXPERIENCE_ITEMS_DEFAULT_LENGTH,
+): Experience[] => {
 	return Array.from({ length }, (_, i) => {
 		return {
 			id: `${EXPERIENCE_MOCK.id}${i}`,
@@ -30,7 +33,9 @@ export const createExperienceItemsMock = (length: number): Experience[] => {
 	});
 };
 
-export const createMicroCMSExperienceListMock = (length: number): MicroCMSListExperience => {
+export const createMicroCMSExperienceListMock = (
+	length: number = EXPERIENCE_ITEMS_DEFAULT_LENGTH,
+): MicroCMSListExperience => {
 	const contents = Array.from({ length }, (_, i) => {
 		return {
 			id: `${EXPERIENCE_MOCK.id}${i}`,
@@ -43,6 +48,3 @@ export const createMicroCMSExperienceListMock = (length: number): MicroCMSListEx
 	});
 	return { contents, totalCount: length, limit: 10, offset: 0 };
 };
-
-export const MICRO_CMS_EXPERIENCE_LIST_MOCK: MicroCMSListExperience =
-	createMicroCMSExperienceListMock(5);
