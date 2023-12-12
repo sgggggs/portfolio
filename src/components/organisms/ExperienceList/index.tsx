@@ -14,7 +14,7 @@ export const ExperienceList: FC<Props> = ({ items }) => {
 
 	return (
 		<ul className={styles.container}>
-			{items.map(({ id, title, body, startDate, endDate, skills }) => (
+			{items.map(({ id, title, body, startDate, endDate, isCurrent, skills }) => (
 				<li key={id}>
 					<ExperienceListItem
 						id={id}
@@ -22,6 +22,7 @@ export const ExperienceList: FC<Props> = ({ items }) => {
 						body={body}
 						startDate={startDate}
 						endDate={endDate}
+						isCurrent={isCurrent}
 						skills={skills}
 					/>
 				</li>

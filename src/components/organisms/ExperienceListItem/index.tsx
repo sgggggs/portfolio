@@ -1,3 +1,4 @@
+import useTranslation from 'next-translate/useTranslation';
 import { type FC } from 'react';
 import { useMemo } from 'react';
 import { TagList } from '@/components/molecules/TagList';
@@ -14,21 +15,36 @@ type Props = Readonly<{
 	body: string;
 	startDate: string;
 	endDate: string;
+	isCurrent: boolean;
 	skills: string[];
 }>;
 
-export const ExperienceListItem: FC<Props> = ({ id, title, body, startDate, endDate, skills }) => {
-	const period: string = useMemo(() => {
+export const ExperienceListItem: FC<Props> = ({
+	id,
+	title,
+	body,
+	startDate,
+	endDate,
+	isCurrent,
+	skills,
+}) => {
+	const { t } = useTranslation();
+
+	const formattedStartDate: string = useMemo(() => {
 		const start = new Date(startDate);
-		const end = new Date(endDate);
+		return new Intl.DateTimeFormat(undefined, DATE_FORMAT_OPTIONS).format(start);
+	}, [startDate]);
 
-		const formattedStartDate = new Intl.DateTimeFormat(undefined, DATE_FORMAT_OPTIONS).format(
-			start,
-		);
-		const formattedEndDate = new Intl.DateTimeFormat(undefined, DATE_FORMAT_OPTIONS).format(end);
+	const formattedEndDate: string = useMemo(() => {
+		if (isCurrent) {
+			return t('common:present');
+		} else {
+			const end = new Date(endDate);
+			return new Intl.DateTimeFormat(undefined, DATE_FORMAT_OPTIONS).format(end);
+		}
+	}, [t, isCurrent, endDate]);
 
-		return `${formattedStartDate} - ${formattedEndDate}`;
-	}, [startDate, endDate]);
+	const period: string = `${formattedStartDate} - ${formattedEndDate}`;
 
 	return (
 		<section aria-labelledby={id} className={styles.container}>

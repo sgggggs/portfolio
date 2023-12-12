@@ -15,6 +15,7 @@ export const EXPERIENCE_MOCK: Experience = {
 	body: 'ExperienceBody',
 	startDate: '2022-12-31T08:00:00.000Z',
 	endDate: '2022-12-31T08:00:00.000Z',
+	isCurrent: false,
 	skills: createExperienceSkillsMock(3),
 };
 
@@ -28,6 +29,7 @@ export const createExperienceItemsMock = (
 			body: `${EXPERIENCE_MOCK.body}${i}`,
 			startDate: EXPERIENCE_MOCK.startDate,
 			endDate: EXPERIENCE_MOCK.endDate,
+			isCurrent: false,
 			skills: EXPERIENCE_MOCK.skills,
 		};
 	});
@@ -43,6 +45,7 @@ export const createMicroCMSExperienceListMock = (
 			body: createI18nSchemaMock(`${EXPERIENCE_MOCK.body}${i}`),
 			startDate: EXPERIENCE_MOCK.startDate,
 			endDate: EXPERIENCE_MOCK.endDate,
+			isCurrent: false,
 			skills: EXPERIENCE_MOCK.skills,
 		};
 	});

@@ -51,6 +51,7 @@ export type Experience = {
 	body: string;
 	startDate: string;
 	endDate: string;
+	isCurrent: boolean;
 	skills: string[];
 };
 
